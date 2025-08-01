@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-const API_key='wxy0g48j7ytth7iif';
+const API_key='wx0jat6lhfl0bxz8u';
 const BASE_URL='https://techhk.aoscdn.com/'
 export const enhancedImageApi = async (file) => {
   try {
