@@ -1,24 +1,18 @@
 import React from 'react';
 import axios from 'axios';
-const API_key='wx0jat6lhfl0bxz8u';
-const BASE_URL='https://techhk.aoscdn.com/'
+const API_key='wxidwyz1ygwgs79cg';
+const BASE_URL='https://techhk.aoscdn.com/';
 export const enhancedImageApi = async (file) => {
   try {
     //code to upload image 
-// '/api/tasks/visual/scale/' Post request
+
 
 const taskId= await uploadImage(file);
 console.log("Task ID:", taskId);
-
-
     //fetch enhanced image
-// '/api/tasks/visual/scale/{task_id}' Get request
-
 const enhancedImageData= await PollFOrEnhanceImage(taskId);
     console.log("Enhanced Image Data:", enhancedImageData);
-
     return enhancedImageData;
-
   } catch (error) {
     console.error("Error in enhancedImageApi:", error);
   }
@@ -27,7 +21,6 @@ const enhancedImageData= await PollFOrEnhanceImage(taskId);
 
 const uploadImage=async(file)=>{
 //code to upload image 
-// '/api/tasks/visual/scale/' Post request
   const formData = new FormData();
   formData.append('image_file', file);
 const {data}=await axios.post(`${BASE_URL}api/tasks/visual/scale/`, formData,{

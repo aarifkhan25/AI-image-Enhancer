@@ -16,4 +16,4 @@ function ImageUpload({handleImageHandle}) {
   )
 }
 
-export default ImageUpload
+export default ImageUpload;
